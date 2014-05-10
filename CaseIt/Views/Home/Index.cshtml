@@ -1,0 +1,72 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "caseIt | For all of your casing needs";
+}
+
+<div id="page">
+    <div id="overlay"></div>
+    <div id="about-dialog">
+        <p>
+            <span class="header">caseIt Is</span><br/>
+            <span class="text">A simple web tool for text transformations,</span><br/>
+            <span class="text">designed to work with keyboard shortcuts.</span>
+        </p>
+        <p>
+            <span class="header">caseIt Was Created</span> <br/>
+            <span class="text">By me, Oded Welgreen, a <a href="https://github.com/OdedW" target="_blank">developer</a> and a musician.</span>
+        </p>
+         <p>
+            <span class="header">If You Have</span><br/>
+             <span class="text">Any suggestions, case transformations or bugs <a href="mailto:caseIt@outlook.com" >let me know</a>.</span>
+        </p>
+    </div>
+    <div id="header">
+        <div class="container">
+            <span id="logo">caseIt</span>
+            <a href="#" data-bind="click: showAbout" id="about-btn">About</a>
+        </div>
+    </div>
+    <div id="main-container" class="container">
+        <div id="copy-notification">
+            <span>Text Copied to clipboard</span>
+        </div>
+        <textarea id="text-area" spellcheck="false" data-bind="value: text"></textarea>
+        <div id="controls">
+            <div class="flat-btn btn-1" data-case="upper" data-bind="click: caseIt, removeSpace: !keepSpaces()">UPPER CASE</div>
+            <div class="flat-btn btn-2" data-case="lower" data-bind="click: caseIt, removeSpace: !keepSpaces()">lower case</div>
+            <div class="flat-btn btn-3" data-case="pascal" data-bind="click: caseIt, removeSpace: !keepSpaces()">Pascal Case</div>
+            <div class="flat-btn btn-4" data-case="camel" data-bind="click: caseIt, removeSpace: !keepSpaces()">camel Case</div>
+            <div class="flat-checkbox">
+                <input type="checkbox" value="None" id="flat-checkbox" name="check" data-bind="checked: keepSpaces" />
+                <label for="flat-checkbox"><span>keep spaces</span></label>
+            </div>
+            <div id="cheatsheet">
+                <p class="header">Cheatsheet</p>
+                <p>
+                    <span data-bind="text: ctrlKeyName"></span>+v anywhere on the page to paste text
+                </p>
+                <p>
+                    Alt+(1-4) to transform text                    
+                </p>
+                <p>
+                    <span data-bind="text: ctrlKeyName"></span>+c anywhere on the page to copy text                    
+                </p>
+            </div>
+            
+        
+            <!-- AddThis Button BEGIN -->
+            <div class="fb-like" data-href="http://caseit.apphb.com" data-width="450" data-layout="button_count" data-show-faces="false" data-send="false"></div>
+            <div class="addthis_toolbox addthis_default_style addthis_16x16_style">
+                <a class="addthis_button_facebook"></a>
+                <a class="addthis_button_twitter"></a>
+                <a class="addthis_button_google_plusone_share"></a>
+                <a class="addthis_button_compact"></a><a class="addthis_counter addthis_bubble_style"></a>
+            </div>
+            <script type="text/javascript">var addthis_config = { "data_track_addressbar": true };</script>
+            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-52242596279a55f6"></script>
+            <!-- AddThis Button END -->
+        </div>
+    </div>
+    <textarea id="clipboard-helper" data-bind="value:text"></textarea>
+</div>
