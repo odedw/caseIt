@@ -143,7 +143,7 @@
       <DependentUpon>bootstrap.less</DependentUpon>
     </Content>
     <Content Include="Content\Styles\bootstrap.min.css">
-      <DependentUpon>bootstrap.less</DependentUpon>
+      <DependentUpon>bootstrap.css</DependentUpon>
     </Content>
     <Content Include="Content\Styles\main.css">
       <DependentUpon>main.less</DependentUpon>
@@ -225,6 +225,15 @@
     <Content Include="Content\Styles\Mixins.less" />
     <Content Include="Content\Styles\bootstrap.less" />
     <Content Include="Content\Styles\main.less" />
+    <Content Include="Content\Styles\main.css.map">
+      <DependentUpon>main.css</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\Mixins.css.map">
+      <DependentUpon>Mixins.css</DependentUpon>
+    </Content>
+    <Content Include="Content\Styles\bootstrap.css.map">
+      <DependentUpon>bootstrap.css</DependentUpon>
+    </Content>
     <None Include="Scripts\lib\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\app\bootstrapper.js" />
     <Content Include="Scripts\app\caseUtils.js" />
