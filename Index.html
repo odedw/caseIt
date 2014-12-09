@@ -13,8 +13,8 @@
     <meta name="description" content="A simple web tool for text transformations designed to work with keyboard shortcuts.">
     <meta name="keywords" content="uppercase,lowercase,pascalcase,camelcase,text transformation, text casing">
     <meta name="author" content="Oded Welgreen">
-    <meta name="title" content="caseIt | For all of your casing needs">
-    <title>@ViewBag.Title</title>
+
+    <title>caseIt | For all of your casing needs</title>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link href='./Content/styles/site.css' rel='stylesheet' type='text/css'>
     <link href='./Content/styles/bootstrap.css' rel='stylesheet' type='text/css'>
@@ -101,7 +101,7 @@
     </div>
     <textarea id="clipboard-helper" data-bind="value:text"></textarea>
 </div>
-@using System.Configuration
+
 <!-- start Mixpanel -->
 <script type="text/javascript">(function (e, b) {
     if (!b.__SV) {
@@ -112,7 +112,7 @@
         }; b.__SV = 1.2
     }
 })(document, window.mixpanel || []);
-mixpanel.init('@ConfigurationManager.AppSettings["MixpanelToken"]');
+mixpanel.init('5aabf5cca96e369de8666325e2cd2dff');
 </script>
 <!-- end Mixpanel -->
 
